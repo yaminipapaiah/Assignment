@@ -1,0 +1,35 @@
+
+20.Python program to print the elements of an array in reverse order
+
+my_array = [1, 2, 3, 4, 5]
+
+# Using a for loop to iterate over the array in reverse order
+
+for i in range(len(my_array)-1, -1, -1):
+
+    print(my_array[i])
+
+2.remove duplicates from sorted array
+
+def remove_duplicates(arr):
+    # If the array is empty, return it as it is
+    if len(arr) == 0:
+        return arr
+    
+    # Initialize variables
+    j = 0
+    
+    # Traverse the array from the second element
+    for i in range(1, len(arr)):
+        # If the current element is different from the previous element
+        if arr[i] != arr[j]:
+            # Increment j and replace its value with the current element
+            j += 1
+            arr[j] = arr[i]
+    
+    # Return the array from index 0 to j+1
+    return arr[:j+1]
+
+
+
+
